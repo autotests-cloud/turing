@@ -14,4 +14,5 @@ public class HireDevelopersPage extends BasePage<HireDevelopersPage> {
 
         return this;
     }
+
 }
