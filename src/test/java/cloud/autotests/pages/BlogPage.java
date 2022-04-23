@@ -10,13 +10,14 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BlogPage extends BasePage<BlogPage> {
-    public static final String url = "/blog";
+
+    public static final String URL = "/blog";
 
     private final SelenideElement subscribeNewsletterElement = $("#newsletter-container");
 
     @Step("Open blog page")
     public BlogPage openPage() {
-        open(url);
+        open(URL);
 
         return this;
     }
