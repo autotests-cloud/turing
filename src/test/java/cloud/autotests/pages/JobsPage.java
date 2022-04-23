@@ -5,11 +5,12 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Selenide.open;
 
 public class JobsPage extends BasePage<JobsPage> {
-    public static final String url = "/jobs";
+
+    public static final String URL = "/jobs";
 
     @Step("Open jobs page")
     public JobsPage openPage() {
-        open(url);
+        open(URL);
 
         return this;
     }

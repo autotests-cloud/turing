@@ -7,12 +7,11 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static io.qameta.allure.Allure.step;
-
 @Story("Basic UI elements tests")
 public class BasicUITests extends BaseTest {
-    MainPage mainPage = new MainPage();
-    JobsPage jobsPage = new JobsPage();
+
+    private final MainPage mainPage = new MainPage();
+    private final JobsPage jobsPage = new JobsPage();
 
     @Test
     @Description("Check that main page has login button")
@@ -27,6 +26,7 @@ public class BasicUITests extends BaseTest {
     void checkApplyForJobsBtnOnMainPageTest() {
         mainPage.openPage()
                 .headerClickButton("Apply for jobs");
-        jobsPage.checkUrl(JobsPage.url);
+        jobsPage.checkUrl(JobsPage.URL);
     }
+
 }

@@ -12,7 +12,8 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 
 @SuppressWarnings("unchecked")
 public abstract class BasePage<T extends BasePage<?>> {
-    SelenideElement header = $("header");
+
+    private final SelenideElement header = $("header");
 
     @Step("Check header has button with text [{btnText}]")
     public T checkHeaderHasButton(String btnText) {
