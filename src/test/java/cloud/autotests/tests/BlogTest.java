@@ -13,16 +13,23 @@ public class BlogTest extends BaseTest {
     @Test
     @DisplayName("Search content on blog page")
     void searchContentTest() {
+        String searchContent = "Metric";
+        int expectedSize = 5;
+
         blogPage.openPage()
-                .search("Metric")
-                .checkSearchResultsGreaterThan(5);
+                .search(searchContent)
+                .checkSearchResultsGreaterThan(expectedSize);
     }
 
     @Test
     @DisplayName("Subscribe to newsletter")
     void subscribeToNewsletterTest() {
+        String name = "Alexander";
+        String email = "sashkir7@mail.ru";
+        boolean isDeveloper = true;
+
         blogPage.openPage()
-                .subscribeToNewsletter("Alexander", "sashkir7@mail.ru", true)
+                .subscribeToNewsletter(name, email, isDeveloper)
                 .checkSubscriptionIsActivated();
     }
 

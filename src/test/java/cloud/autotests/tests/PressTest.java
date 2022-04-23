@@ -20,8 +20,10 @@ public class PressTest extends BaseTest {
     @Test
     @DisplayName("News items: validate size and structure")
     void validateNewsTest() {
+        int expectedSize = 6;
+
         pressPage.openPage()
-                .checkNewsItemsShouldHaveSize(6)
+                .checkNewsItemsShouldHaveSize(expectedSize)
                 .checkNewsItemsShouldHaveValidStructure();
     }
 
