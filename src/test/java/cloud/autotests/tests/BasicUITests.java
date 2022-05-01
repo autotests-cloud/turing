@@ -1,8 +1,8 @@
 package cloud.autotests.tests;
 
+import cloud.autotests.pages.DevelopersPage;
 import cloud.autotests.pages.JobsPage;
 import cloud.autotests.pages.MainPage;
-import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,14 +12,7 @@ public class BasicUITests extends BaseTest {
 
     private final MainPage mainPage = new MainPage();
     private final JobsPage jobsPage = new JobsPage();
-
-    @Test
-    @Description("Check that main page has login button")
-    @DisplayName("Main page has login button")
-    void mainPageHasLoginButtonTest() {
-        mainPage.openPage()
-                .checkHeaderHasButton("Login");
-    }
+    private final DevelopersPage developersPage = new DevelopersPage();
 
     @Test
     @DisplayName("Apply for jobs on main page")
@@ -27,6 +20,14 @@ public class BasicUITests extends BaseTest {
         mainPage.openPage()
                 .headerClickButton("Apply for jobs");
         jobsPage.checkUrl(JobsPage.URL);
+    }
+
+    @Test
+    @DisplayName("Apply hire developers on main page")
+    void checkApplyHireDevelopersOnMainPageTest() {
+        mainPage.openPage()
+                .headerClickButton("Hire Developers");
+        developersPage.checkUrl(DevelopersPage.URL);
     }
 
 }

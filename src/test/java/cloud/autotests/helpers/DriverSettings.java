@@ -21,7 +21,6 @@ public class DriverSettings {
         ChromeOptions chromeOptions = new ChromeOptions();
 
         chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");

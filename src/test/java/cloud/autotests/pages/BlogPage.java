@@ -6,7 +6,6 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byName;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BlogPage extends BasePage<BlogPage> {
@@ -39,20 +38,18 @@ public class BlogPage extends BasePage<BlogPage> {
     }
 
     @Step("Subscribe to the Turing Newsletter")
-    public BlogPage subscribeToNewsletter(String name, String email, boolean isDeveloper) {
+    public BlogPage subscribeToNewsletter(String name, String email) {
         subscribeNewsletterElement.find(byName("name")).setValue(name);
         subscribeNewsletterElement.find(byName("email")).setValue(email);
-        String job = isDeveloper ? "I'm a Developer" : "I'm an Employer";
-        subscribeNewsletterElement.find(byText(job)).click();
-        sleep(1000);
-        subscribeNewsletterElement.find("[type='submit']").click();
+        subscribeNewsletterElement.find("[value='looking-to-hire']").click();
+        subscribeNewsletterElement.find("[value='Subscribe']").click();
 
         return this;
     }
 
     @Step("Check subscription is activated")
     public BlogPage checkSubscriptionIsActivated() {
-        subscribeNewsletterElement.shouldHave(text("Thanks for submitting the form."));
+        subscribeNewsletterElement.shouldHave(text("Your form has been successfully submitted."));
 
         return this;
     }
