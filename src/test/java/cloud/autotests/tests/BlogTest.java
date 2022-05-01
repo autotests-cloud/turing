@@ -26,10 +26,9 @@ public class BlogTest extends BaseTest {
     void subscribeToNewsletterTest() {
         String name = "Alexander";
         String email = "sashkir7@mail.ru";
-        boolean isDeveloper = true;
 
         blogPage.openPage()
-                .subscribeToNewsletter(name, email, isDeveloper)
+                .subscribeToNewsletter(name, email)
                 .checkSubscriptionIsActivated();
     }
 
