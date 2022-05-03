@@ -1,10 +1,12 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.pages.BlogPage;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@Feature("Blog")
 @Story("Blog tests")
 public class BlogTest extends BaseTest {
 

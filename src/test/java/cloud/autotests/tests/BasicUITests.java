@@ -3,10 +3,12 @@ package cloud.autotests.tests;
 import cloud.autotests.pages.DevelopersPage;
 import cloud.autotests.pages.JobsPage;
 import cloud.autotests.pages.MainPage;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@Feature("Home")
 @Story("Basic UI elements tests")
 public class BasicUITests extends BaseTest {
 

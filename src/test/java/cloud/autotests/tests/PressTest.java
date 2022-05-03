@@ -1,10 +1,12 @@
 package cloud.autotests.tests;
 
 import cloud.autotests.pages.PressPage;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@Feature("Press")
 @Story("Press tests")
 public class PressTest extends BaseTest {
 

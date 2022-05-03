@@ -4,6 +4,7 @@ import cloud.autotests.config.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.models.Credentials;
 import cloud.autotests.tests.BaseTest;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -15,6 +16,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+@Feature("API")
 @Story("API login tests")
 public class LoginTests extends BaseTest {
 
