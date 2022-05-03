@@ -4,6 +4,7 @@ import cloud.autotests.config.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.models.Credentials;
 import cloud.autotests.tests.BaseTest;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -24,6 +25,7 @@ public class LoginTests extends BaseTest {
     }
 
     @Test
+    @AllureId("7722")
     @Tag("api")
     @DisplayName("Authorization with not existing account to self-serve")
     void notExistingAccountLoginTest() {

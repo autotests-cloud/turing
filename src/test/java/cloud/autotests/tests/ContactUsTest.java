@@ -2,6 +2,7 @@ package cloud.autotests.tests;
 
 import cloud.autotests.pages.ContactUsPage;
 import cloud.autotests.pages.MainPage;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ public class ContactUsTest extends BaseTest {
     private final ContactUsPage contactUsPage = new ContactUsPage();
 
     @Test
+    @AllureId("9681")
     @DisplayName("Send feedback")
     void sendFeedbackTest() {
         String fullName = "Alexander Pi";
